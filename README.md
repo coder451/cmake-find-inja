@@ -25,3 +25,10 @@ The 64-bit compiler and linker for clang are on the path.
 For me that path entry is
 
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\Llvm\x64\bin
+
+## WSL2
+
+cget seems not to work on WSL2. It writes a message saying it cannot handle UNC paths
+and tries to use MSVC, instead of detecting gcc as the default compiler.
+
+Handle this by building and installing packages from source into the cget location.

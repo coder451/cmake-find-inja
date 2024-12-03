@@ -28,7 +28,20 @@
         "CMAKE_RC_COMPILER": "RC.exe",
         "CMAKE_LINKER": "lld-link.exe"
       }
+    },
+    {
+      "inherits": [
+        "user-cache-variables"
+      ],
+      "name": "gcc-x64-debug",
+      "displayName": "gcc-x64-debug",
+      "generator": "Ninja",
+      "binaryDir": "builds/ninja/gcc/x64/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
     }
+
   ],
   "buildPresets": [
     {
@@ -39,6 +52,11 @@
     {
       "name": "clang-cl-x64-debug",
       "configurePreset": "clang-cl-x64",
+      "configuration": "Debug"
+    },
+    {
+      "name": "gcc-x64-debug",
+      "configurePreset": "gcc-x64-debug",
       "configuration": "Debug"
     }
   ]

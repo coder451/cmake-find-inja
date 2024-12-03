@@ -7,7 +7,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 #message("PATH=$ENV{PATH}")
 
 # Not the alias (is used to construct filenames)
-find_package(inja CONFIG REQUIRED NO_DEFAULT_PATH)
+find_package(inja CONFIG REQUIRED)
 
 add_executable(hello_inja main.cpp)
 
