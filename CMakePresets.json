@@ -1,0 +1,45 @@
+{
+  "version": 9,
+  "include": [
+    "${sourceDir}/preset-include/user-cache-variables.json"
+  ],
+  "configurePresets": [
+    {
+      "inherits": [
+        "user-cache-variables"
+      ],
+      "name": "msvc17-x64",
+      "displayName": "msvc17-x64",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "builds/msvc17/x64"
+    },
+    {
+      "inherits": [
+        "user-cache-variables"
+      ],
+      "name": "clang-cl-x64",
+      "displayName": "ninja-win-clang-debug",
+      "generator": "Ninja",
+      "binaryDir": "builds/ninja/win-clang/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_COMPILER": "clang-cl.exe",
+        "CMAKE_RC_COMPILER": "RC.exe",
+        "CMAKE_LINKER": "lld-link.exe"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "msvc17-x64-debug",
+      "configurePreset": "msvc17-x64",
+      "configuration": "Debug"
+    },
+    {
+      "name": "clang-cl-x64-debug",
+      "configurePreset": "clang-cl-x64",
+      "configuration": "Debug"
+    }
+  ]
+}

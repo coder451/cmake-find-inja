@@ -1,0 +1,19 @@
+{
+  "version": 9,
+  "configurePresets": [
+    {
+      "name": "user-cache-variables",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": {
+          "type": "STRING",
+          "value": "<some path>"
+        },
+        "inja_DIR": {
+          "type": "STRING",
+          "value": "<some path>"
+        }
+      }
+    }
+  ]
+}
